@@ -1,0 +1,47 @@
+{
+    "name": "dazzlesoftware/session",
+    "type": "library",
+    "description": "Dazzle Session Package",
+    "keywords": ["dazzle", "framework", "session"],
+    "homepage": "https://github.com/dazzle-framework/session",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "php": "^7.3.0"
+    },
+    "require-dev": {
+        "dazzlesoftware/dazzle-coding-standard": "^1.0",
+        "dazzlesoftware/console": "^1.0",
+        "dazzlesoftware/database": "^1.0",
+        "dazzlesoftware/event": "^1.0",
+        "dazzlesoftware/input": "^1.0",
+        "dazzlesoftware/test": "^1.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "suggest": {
+        "dazzlesoftware/console": "Install dazzlesoftware/console if you want to use the CreateSessionTableCommand class.",
+        "dazzlesoftware/database": "Install dazzlesoftware/database if you want to use a database connection managed with Dazzle\\Database\\DatabaseDriver as a session handler.",
+        "dazzlesoftware/event": "The dazzlesoftware/event package is required to use Dazzle\\Session\\Session.",
+        "dazzlesoftware/input": "The dazzlesoftware/input package is required to use Address and Forwarded session validators.",
+        "ext-apcu": "To use APCu cache as a session handler",
+        "ext-memcached": "To use a Memcached server as a session handler",
+        "ext-redis": "To use a Redis server as a session handler",
+        "ext-session": "To use the Dazzle\\Session\\Storage\\NativeStorage storage class.",
+        "ext-wincache": "To use WinCache as a session handler"
+    },
+    "autoload": {
+    	"psr-4": {
+            "Dazzle\\Session\\": "src/"
+    	}
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dazzle\\Session\\UnitTests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-2.0-dev": "2.x-dev"
+        }
+    }
+}
